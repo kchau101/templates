@@ -98,5 +98,6 @@
     <File Name="setup.asm"/>
     <File Name="isr.asm"/>
     <File Name="main.asm"/>
+    <File Name="makefile"/>
   </VirtualDirectory>
 </CodeLite_Project>

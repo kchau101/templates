@@ -8,6 +8,7 @@ OBJS = main.o setup.o isr.o
 LIBS = 
 RELOCATABLE = TRUE
 
+.PHONY: clean burn
 all: main.hex
 
 main.hex: $(SRCS)
@@ -17,11 +18,14 @@ ifeq ($(RELOCATABLE), TRUE)
 else
 	$(ASM) -r hex -p $(PROCESSOR) main.asm
 endif
-burn: $(BURN) -M -PPIC$(PROCESSOR) -F main.hex
 
-clean: $(DEL) *.hex
-		$(DEL) *.o
-		$(DEL) *.map
-		$(DEL) *.lst
-		$(DEL) *.obj
-		$(DEL) *.cod
+burn:
+	$(BURN) -M -PPIC$(PROCESSOR) -F main.hex
+
+clean:
+	$(DEL) *.hex
+	$(DEL) *.o
+	$(DEL) *.map
+	$(DEL) *.lst
+	$(DEL) *.obj
+	$(DEL) *.cod
