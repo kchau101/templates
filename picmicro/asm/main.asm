@@ -9,6 +9,13 @@
 ;Desc:
 ;*******************************************************************************
 include "p16f88.inc"
+
+;Program Entry vector 
+.PGM	CODE 0x0000
+PGM:
+	call setup	; 0x0000
+	goto MAIN	; 0x0001
+	
 .MAIN	CODE 
 MAIN:
 	banksel PORTB
