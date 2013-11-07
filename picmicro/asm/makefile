@@ -18,7 +18,7 @@ ifeq ($(RELOCATABLE), TRUE)
 else
 	$(ASM) -r hex -p $(PROCESSOR) main.asm
 endif
-	ls -l
+	ls
 	$(EDITOR) main.lst
 burn:
 	$(BURN) -M -PPIC$(PROCESSOR) -F main.hex
