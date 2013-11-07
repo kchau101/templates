@@ -8,6 +8,7 @@
 ;File:      setup.asm
 ;Desc:		 Setup subroutine for peripherals and I/O
 ;*******************************************************************************
+include "register.asm"
 .SETUP	CODE
 SETUP:
 	nop

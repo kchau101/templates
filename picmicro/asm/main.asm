@@ -8,7 +8,7 @@
 ;File:      main.asm
 ;Desc:
 ;*******************************************************************************
-include "p16f88.inc"
+include "register.asm"
 
 ;Program Entry vector 
 .PGM	CODE 0x0000

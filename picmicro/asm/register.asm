@@ -5,13 +5,8 @@
 ;Date:      
 ;
 ;Project:   
-;File:      isr.asm
-;Desc:		 Interrupt Vector for servicing interrupts
+;File:      register.asm
+;Desc:		 This is a symbolic include that should point to a real device
+;					include file. i.e. p16f88.inc
 ;*******************************************************************************
-include "register.asm"
-
-.IVR	CODE	0x0004
-ISR:
-	nop
-	retfie
-END
+include "p16f88.inc"
